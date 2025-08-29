@@ -1,0 +1,118 @@
+/* --- FINAL "AURORA" SHADING THEME FOR THE MENU PAGE --- */
+
+/* --- 1. Global Styles & The Animated Gradient Background --- */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    /* The beautiful, shading gradient to match other pages */
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    color: #ffffff; /* Default text color is white */
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* --- 2. Header / Navbar Styling (Frosted Glass Effect) --- */
+header {
+    background-color: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo { font-size: 26px; font-weight: 700; }
+nav a { color: #ffffff; text-decoration: none; margin-left: 15px; font-size: 16px; padding: 8px 18px; border-radius: 50px; transition: all 0.3s ease; }
+nav a:hover { background-color: rgba(255, 255, 255, 0.1); }
+
+/* --- 3. Main Content Styling --- */
+main { padding: 50px 0; }
+.main-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+h1 { font-size: 36px; margin-bottom: 40px; text-align: center; text-shadow: 0 2px 5px rgba(0,0,0,0.3); }
+.menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+
+/* --- 4. Menu Card Styling (Dark Glass Effect) --- */
+.menu-card {
+    background: rgba(0, 0, 0, 0.3); /* Slightly darker glass for better text contrast */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: transform 0.3s ease;
+}
+.menu-card:hover { transform: translateY(-5px); }
+
+/* --- 5. Card Image & RATING IN TOP RIGHT CORNER --- */
+.menu-image-container {
+    position: relative; /* This is crucial for positioning the rating */
+}
+.menu-image { width: 100%; height: 200px; object-fit: cover; }
+
+.rating {
+    position: absolute; /* This places the rating over the image */
+    top: 12px;
+    right: 12px;
+    background-color: #5851db; /* Purple-blue from the theme */
+    color: #ffffff;
+    padding: 5px 12px;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* --- 6. Card Content and Button --- */
+.menu-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* This makes the content area fill the available space */
+}
+
+.menu-name { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+.menu-description { font-size: 15px; color: rgba(255, 255, 255, 0.8); line-height: 1.5; margin-bottom: 15px; }
+.price { font-size: 18px; font-weight: 700; }
+
+.add-to-cart-form {
+    margin-top: auto; /* This is the magic that pushes the button to the bottom */
+    padding-top: 15px;
+}
+
+.add-btn {
+    width: auto; /* This REMOVES the full width */
+    display: block; /* Allows margin auto to work for centering */
+    margin: 0 auto; /* This centers the button */
+    padding: 10px 30px; /* This controls the size */
+    
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #e1306c; /* Vibrant Pink to match */
+    transition: all 0.3s ease;
+}
+.add-btn:hover { background-color: #c13584; transform: scale(1.05); }

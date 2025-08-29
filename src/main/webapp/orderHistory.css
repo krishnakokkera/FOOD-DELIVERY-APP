@@ -1,0 +1,161 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #483D8B, #6A5ACD);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+}
+
+/* Header Styling (re-used from your profile.css for consistency) */
+header {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 15px 0;
+}
+
+.header-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+}
+
+/* Main container that centers the history box */
+.history-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Aligns to top */
+    padding: 60px 20px;
+    min-height: calc(100vh - 150px);
+}
+
+/* The main dark purple box */
+.history-box {
+    background-color: #312964;
+    padding: 40px 50px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 900px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* "Your Order History" Title */
+.history-title {
+    text-align: center;
+    font-size: 2.2em;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+/* Container for all order items */
+.order-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Space between each order card */
+}
+
+/* Styling for a single order item card */
+.order-item {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.order-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+}
+
+.order-header, .order-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-header {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.label {
+    font-size: 0.9em;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+}
+
+.value {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.order-id, .order-date, .order-status, .order-total {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Specific styling for status (add more statuses as needed) */
+.status-delivered {
+    color: #4CAF50; /* Green */
+    font-weight: bold;
+}
+.status-shipped {
+    color: #FFC107; /* Amber */
+    font-weight: bold;
+}
+.status-cancelled {
+    color: #F44336; /* Red */
+    font-weight: bold;
+}
+.status-pending {
+    color: #2196F3; /* Blue */
+    font-weight: bold;
+}
+
+
+/* Styling for when there are no orders */
+.no-orders-message {
+    text-align: center;
+    padding: 40px;
+}
+
+.no-orders-message p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.start-shopping-btn {
+    background-color: #6A5ACD;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.start-shopping-btn:hover {
+    background-color: #483D8B;
+}

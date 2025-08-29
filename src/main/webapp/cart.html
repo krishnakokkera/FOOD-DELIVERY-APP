@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <!-- Google Font for a modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+    <div class="cart-container">
+        <!-- Cart Header -->
+        <header class="cart-header">
+            <h1>Review Your Order</h1>
+        </header>
+
+        <!-- List of Items in the Cart -->
+        <main class="items-list">
+            <!-- Item 1 -->
+            <div class="cart-item">
+                <img src="https://via.placeholder.com/150/F2994A/ffffff?text=Burger" alt="Burger">
+                <div class="item-info">
+                    <p class="item-name">The King's Burger</p>
+                    <p class="item-price">₹150.00</p>
+                </div>
+                <div class="item-controls">
+                    <div class="quantity-selector">
+                        <button class="quantity-btn minus">-</button>
+                        <span class="quantity">1</span>
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <button class="remove-btn">Remove</button>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Cart Footer with Buttons and Total -->
+        <footer class="cart-footer">
+            <button class="add-more-items-btn">Add More Items</button>
+            <div class="total-section">
+                <span class="total-label">Grand Total</span>
+                <span class="total-amount">₹240.00</span>
+            </div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </footer>
+    </div>
+
+</body>
+</html>

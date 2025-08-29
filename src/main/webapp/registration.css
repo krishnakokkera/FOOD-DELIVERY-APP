@@ -1,0 +1,154 @@
+/* --- 1. Global Styles & A NEW "AURORA" GRADIENT BACKGROUND --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    /* This is the new, beautiful shading gradient you wanted */
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    background-size: 400% 400%; /* Makes the gradient larger for animation */
+    animation: gradientAnimation 15s ease infinite; /* Animates the gradient */
+    
+    /* Centering the card */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* This is the animation that makes the background colors move slowly */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* --- 2. THE REGISTRATION CARD (DARK GLASS THEME) --- */
+.registration-card {
+    width: 100%;
+    max-width: 450px;
+    padding: 30px 40px;
+
+    /* A darker, sleeker "Frosted Glass" effect */
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+    color: #ffffff;
+    box-sizing: border-box;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+/* --- 3. ATTRACTIVE HEADINGS --- */
+.registration-card h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 8px;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Adds a subtle shadow to the text */
+}
+
+.registration-card .subtitle {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-align: center;
+    opacity: 0.9;
+}
+
+/* --- 4. FORM ELEMENTS (LABELS AND INPUTS) --- */
+.registration-card label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.registration-card input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-sizing: border-box;
+
+    background-color: rgba(0, 0, 0, 0.3); /* Darker inputs for a modern look */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 1rem;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.registration-card input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Soft blue glow effect when you click an input field */
+.registration-card input:focus {
+    outline: none;
+    border-color: #5851db; /* Purple-blue from the gradient */
+    box-shadow: 0 0 15px rgba(88, 81, 219, 0.5);
+}
+
+/* --- 5. THE REGISTER BUTTON (VIBRANT PINK) --- */
+.registration-card button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    /* Bright pink button stands out beautifully */
+    background-color: #e1306c;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.registration-card button:hover {
+    background-color: #c13584; /* A slightly deeper pink/purple on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* --- 6. LOGIN LINK AT THE BOTTOM --- */
+.login-link {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.login-link a {
+    color: #e1306c; /* Matching pink for the link */
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* --- 7. STYLING FOR THE SCROLLBAR (MATCHING THEME) --- */
+.registration-card::-webkit-scrollbar {
+    width: 8px;
+}
+
+.registration-card::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.registration-card::-webkit-scrollbar-thumb {
+    background: #c13584; /* Purple-pink for the scrollbar handle */
+    border-radius: 10px;
+}
+
+.registration-card::-webkit-scrollbar-thumb:hover {
+    background: #e1306c; /* Brighter pink for the handle on hover */
+}

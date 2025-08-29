@@ -1,0 +1,161 @@
+/* --- 1. Global Styles & The "AURORA" SHADING GRADIENT BACKGROUND --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    /* The beautiful, shading gradient with blue, purple, and pink */
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    background-size: 400% 400%; /* Makes the gradient larger for the animation */
+    animation: gradientAnimation 15s ease infinite; /* This makes the colors move */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* The animation keyframes that move the background */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* --- 2. THE CARD (DARK GLASS THEME) --- */
+.registration-card {
+    width: 100%;
+    max-width: 450px;
+    padding: 40px; /* More padding for a better look on the login page */
+
+    /* The sleek "Frosted Glass" effect */
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+    color: #ffffff; /* White text looks best on this background */
+    box-sizing: border-box;
+    max-height: 90vh; /* This handles the scrolling if the content is too long */
+    overflow-y: auto;
+}
+
+/* --- 3. HEADINGS --- */
+.registration-card h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 8px;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.registration-card .subtitle {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 35px; /* More space before the form */
+    text-align: center;
+    opacity: 0.9;
+}
+
+/* --- 4. FORM ELEMENTS --- */
+.registration-card label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.registration-card input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-sizing: border-box;
+
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 1rem;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.registration-card input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Soft blue glow effect on focus */
+.registration-card input:focus {
+    outline: none;
+    border-color: #5851db;
+    box-shadow: 0 0 15px rgba(88, 81, 219, 0.5);
+}
+
+/* --- 5. THE LOGIN/REGISTER BUTTON (VIBRANT PINK) --- */
+.registration-card button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    background-color: #e1306c; /* Vibrant Pink */
+    transition: all 0.3s ease;
+    margin-top: 15px; /* More space above the button */
+}
+
+.registration-card button:hover {
+    background-color: #c13584;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* --- 6. FOOTER LINK --- */
+.login-link {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.login-link a {
+    color: #e1306c; /* Matching pink link */
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* --- ERROR MESSAGE STYLING --- */
+.error-msg {
+    color: #ffffff;
+    font-weight: 500;
+    padding: 10px;
+    background-color: rgba(225, 48, 108, 0.5); /* Semi-transparent pink */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* --- Scrollbar Styling --- */
+.registration-card::-webkit-scrollbar {
+    width: 8px;
+}
+.registration-card::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.registration-card::-webkit-scrollbar-thumb {
+    background: #c13584;
+    border-radius: 10px;
+}
+.registration-card::-webkit-scrollbar-thumb:hover {
+    background: #e1306c;
+}
