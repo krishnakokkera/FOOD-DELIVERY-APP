@@ -32,7 +32,7 @@
         <p class="error-message"><%= message %></p>
     <% } %>
 
-    <form action="UserRegistarion" method="post">
+    <form action="UserRegistration" method="post">
         
         <label for="name">Name</label>
         <input type="text" id="name" name="name" placeholder="Enter your full name" required>

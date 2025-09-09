@@ -7,7 +7,7 @@ public class Order {
 	private int orderId;
 	private int restaurantId;
 	private int userId;
-	 private LocalDateTime orderDate;
+	private LocalDateTime orderDate;
 	private double totalAmount;
 	private String status;
 	private String shippingAddress;
