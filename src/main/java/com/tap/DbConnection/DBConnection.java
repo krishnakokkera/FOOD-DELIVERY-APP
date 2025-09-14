@@ -37,7 +37,8 @@ import java.sql.SQLException;
 public class DBConnection {
 	public static String url = "jdbc:mysql://mysql-31676370-kokkerakrishna10-06b3.k.aivencloud.com:14652/defaultdb?ssl-mode=REQUIRED";
 	public static String username = "avnadmin";
-	public static String password = "AVNS_UbwkaPqB43_S6mPxkTL";
+	public static String password = System.getenv("DB_PASSWORD");
+
 
     public static Connection connection;
 
