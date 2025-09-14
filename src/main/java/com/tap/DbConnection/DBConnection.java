@@ -32,27 +32,24 @@ package com.tap.DbConnection;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
 
 public class DBConnection {
-	public static String url = "jdbc:mysql://mysql-31676370-kokkerakrishna10-06b3.k.aivencloud.com:14652/defaultdb?ssl-mode=REQUIRED";
-	public static String username = "avnadmin";
-	public static String password = System.getenv("DB_PASSWORD");
+    private static Connection connection;
 
+    public static Connection getConnection() {
+        if (connection == null) {
+            try {
+                String url = System.getenv("DB_URL");
+                String user = System.getenv("DB_USER");
+                String password = System.getenv("DB_PASSWORD");
 
-    public static Connection connection;
-
-    public static Connection getConnections() {
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection(url, username, password);
-            System.out.println("✅ Connected to FreeSQLdatabase!");
-        } catch (ClassNotFoundException e) {
-            System.out.println("❌ JDBC Driver not found.");
-            e.printStackTrace();
-        } catch (SQLException e) {
-            System.out.println("❌ Database connection failed.");
-            e.printStackTrace();
+                Class.forName("com.mysql.cj.jdbc.Driver"); // load MySQL driver
+                connection = DriverManager.getConnection(url, user, password);
+                System.out.println("✅ Database connected successfully!");
+            } catch (Exception e) {
+                e.printStackTrace();
+                System.out.println("❌ Database connection failed. Check environment variables.");
+            }
         }
         return connection;
     }
