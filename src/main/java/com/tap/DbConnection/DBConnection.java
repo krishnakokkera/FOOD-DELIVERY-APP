@@ -39,9 +39,9 @@ public class DBConnection {
     public static Connection getConnection() {
         if (connection == null) {
             try {
-                String url = System.getenv("DB_URL");
-                String user = System.getenv("DB_USER");
-                String password = System.getenv("DB_PASSWORD");
+                String url = System.getenv("DB_URLS");
+                String user = System.getenv("DB_USERS");
+                String password = System.getenv("DB_PASSWORDS");
 
                 Class.forName("com.mysql.cj.jdbc.Driver"); // load MySQL driver
                 connection = DriverManager.getConnection(url, user, password);
