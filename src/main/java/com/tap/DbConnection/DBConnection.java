@@ -35,15 +35,16 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DBConnection {
-    public static String url = "jdbc:mysql://sql.freesqldatabase.com:3306/sql7684657";
-    public static String uname = "sql7684657";
-    public static String password = "bK3gA9XxkN";
+	public static String url = "jdbc:mysql://mysql-31676370-kokkerakrishna10-06b3.k.aivencloud.com:14652/defaultdb?ssl-mode=REQUIRED";
+	public static String username = "avnadmin";
+	public static String password = "AVNS_UbwkaPqB43_S6mPxkTL";
+
     public static Connection connection;
 
     public static Connection getConnections() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection(url, uname, password);
+            connection = DriverManager.getConnection(url, username, password);
             System.out.println("✅ Connected to FreeSQLdatabase!");
         } catch (ClassNotFoundException e) {
             System.out.println("❌ JDBC Driver not found.");
@@ -55,4 +56,3 @@ public class DBConnection {
         return connection;
     }
 }
-
