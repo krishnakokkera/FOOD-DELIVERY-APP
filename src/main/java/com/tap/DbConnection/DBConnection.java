@@ -42,10 +42,18 @@ public class DBConnection {
     public static Connection getConnection() {
         if (connection == null) {
             try {
-                
+//                String url = System.getenv("DB_URLS");
+//                String user = System.getenv("DB_USERS");
+//                String password = System.getenv("DB_PASSWORDS");
+            	 System.out.println("DB_URLS = " + url);
+                 System.out.println("DB_USERS = " + user);
+                 System.out.println("DB_PASSWORDS = " + password);
+
+
                 Class.forName("com.mysql.cj.jdbc.Driver"); // load MySQL driver
                 connection = DriverManager.getConnection(url, user, password);
                 System.out.println("✅ Database connected successfully!");
+               
             } catch (Exception e) {
                 e.printStackTrace();
                 System.out.println("❌ Database connection failed. Check environment variables.");
