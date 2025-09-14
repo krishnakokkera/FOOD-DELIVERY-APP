@@ -39,7 +39,7 @@ public class DBConnection {
     public static String user = System.getenv("DB_USERS");
     public static String password = System.getenv("DB_PASSWORDS");
 
-    public static Connection getConnection() {
+    public static Connection getConnections() {
         if (connection == null) {
             try {
 //                String url = System.getenv("DB_URLS");
